@@ -33,7 +33,7 @@ if ( ! class_exists('Connections_Legacy_Templates') ) {
 
 		public function __construct() {
 
-			remove_filter( 'cn_get_template_slug', array( 'cnTemplate_Compatibility', 'deprecatedTemplates' ) );
+			remove_filter( 'cn_get_template', array( 'cnTemplate_Compatibility', 'deprecatedTemplates' ) );
 
 			self::defineConstants();
 			self::loadDependencies();
